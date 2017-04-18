@@ -1,0 +1,13 @@
+description "SPI projects"
+
+// for the annotation processor
+repositories {
+    maven {
+        url "http://dl.bintray.com/dzuvic/jtsgen"
+    }
+}
+
+dependencies {
+    compileOnly "jtsgen:jtsgen-annotations:0.0.1"
+    compileOnly "jtsgen:jtsgen-processor:0.0.1"
+}

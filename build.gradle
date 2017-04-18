@@ -1,0 +1,7 @@
+group 'jtsgen-example'
+
+
+allprojects {
+    version '1.0-SNAPSHOT'
+    apply plugin: 'java'
+}
