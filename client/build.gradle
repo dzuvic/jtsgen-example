@@ -1,0 +1,12 @@
+group 'jtsgen-example'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'war'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile project(':api')
+}

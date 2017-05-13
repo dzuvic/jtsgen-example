@@ -8,6 +8,20 @@ repositories {
 }
 
 dependencies {
-    compileOnly "jtsgen:jtsgen-annotations:0.0.2"
-    compileOnly "jtsgen:jtsgen-processor:0.0.2"
+    compileOnly "jtsgen:jtsgen-annotations:0.1.1"
+    compileOnly "jtsgen:jtsgen-processor:0.1.1"
 }
+// the location of the generated source files
+// unfortunately tsc is not able to go to another dir above tsconfig.json
+// using this way it might be possible creating the ts module on (auto) compile
+def tsOutDir="../client/api_types"
+
+task createTsDir() {
+    mkdir (tsOutDir)
+}
+
+compileJava {
+    options.compilerArgs = [ "-s", tsOutDir ]
+    dependsOn(createTsDir)
+}
+
