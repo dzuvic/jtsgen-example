@@ -1,7 +1,24 @@
-group 'jtsgen-example'
+
+buildscript {
+  repositories {
+    jcenter()
+  }
+
+  dependencies {
+    classpath 'org.akhikhl.gretty:gretty:+'
+  }
+}
+
 
 
 allprojects {
     version '1.0-SNAPSHOT'
+    group 'jtsgen-example'
+    
     apply plugin: 'java'
+
+    repositories {
+        jcenter()
+    }
 }
+

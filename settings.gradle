@@ -17,4 +17,5 @@ include 'services:webservice'
 rootProject.name = 'jtsgen-example'
 include 'api'
 include 'client'
+include 'service'
 
