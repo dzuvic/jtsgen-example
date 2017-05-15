@@ -8,13 +8,18 @@ repositories {
 }
 
 dependencies {
-    compileOnly "jtsgen:jtsgen-annotations:0.1.1"
-    compileOnly "jtsgen:jtsgen-processor:0.1.1"
+    compileOnly "jtsgen:jtsgen-annotations:0.1.2"
+    compileOnly "jtsgen:jtsgen-processor:0.1.2"
 }
+
 // the location of the generated source files
 // unfortunately tsc is not able to go to another dir above tsconfig.json
 // using this way it might be possible creating the ts module on (auto) compile
-def tsOutDir="../client/api_types"
+def tsOutDir=new File("${project(':client').projectDir}/src/generated")
+
+// or if you don't want the output being created into the client project
+//def tsOutDir=new File("${buildDir}/ts")
+
 
 task createTsDir() {
     mkdir (tsOutDir)

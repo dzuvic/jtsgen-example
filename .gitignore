@@ -15,4 +15,4 @@ build/
 hs_err_pid*
 
 # Don't include the generated TS files
-/client/api_types/jtsgen/
+/client/src/generated/*
