@@ -2,7 +2,7 @@ import {Component, OnInit} from "@angular/core";
 import {Subject} from "rxjs/Subject";
 import {Http} from "@angular/http";
 import "rxjs/add/operator/map";
-import Person = exampleApi.Person;
+import {Person} from "../../../exampleapi/example-api";
 
 
 @Component({

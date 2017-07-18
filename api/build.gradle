@@ -8,16 +8,17 @@ repositories {
 }
 
 dependencies {
-    compileOnly "jtsgen:jtsgen-annotations:0.1.2"
-    compileOnly "jtsgen:jtsgen-processor:0.1.2"
+    compileOnly "jtsgen:jtsgen-annotations:0.2.0"
+    compileOnly "jtsgen:jtsgen-processor:0.2.0"
 }
 
 // the location of the generated source files
 // unfortunately tsc is not able to go to another dir above tsconfig.json
 // using this way it might be possible creating the ts module on (auto) compile
-def tsOutDir=new File("${project(':client').projectDir}/src/generated")
+def tsOutDir=new File("${project(':client').projectDir}/src")
 
 // or if you don't want the output being created into the client project
+// currently this is not possible. Some explanation can be found here: https://github.com/angular/angular-cli/issues/5217
 //def tsOutDir=new File("${buildDir}/ts")
 
 

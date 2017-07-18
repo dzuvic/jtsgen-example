@@ -1,7 +1,9 @@
-@TSModule(moduleName = "exampleApi", author = "Burgen Perle", outputType = OutputType.DECLARED_NAMESPACE,
+@TSModule(moduleName = "exampleApi", author = "Bürger Fauna", outputType = OutputType.NO_MODULE,
         customTypeMappings = {
         "java.time.LocalDate -> string",
-        "java.lang.Number -> number"
+        "java.lang.Number -> number",
+        "java.util.Date -> number",
+        "java.util.concurrent.Future<T> -> number<T>"
 })
 package dz.jtsgen.example;
 

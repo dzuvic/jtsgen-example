@@ -1,0 +1,22 @@
+
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'org.akhikhl.gretty'
+
+
+gretty {
+    httpPort = 8080
+    debugPort = 8091
+    servicePort = 8092
+    statusPort = 8093
+    contextPath = '/'
+    // jvmArgs = ['-Xmx1024M', '-XX:PermSize=128M', '-XX:MaxPermSize=256M']
+    servletContainer = 'jetty9'
+}
+
+war.baseName = 'jtsgen-example'
+
+dependencies {
+    compile project(":service")
+    compile project(":client")
+}
