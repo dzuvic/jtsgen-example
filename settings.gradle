@@ -19,4 +19,5 @@ include 'api'
 include 'client'
 include 'service'
 include 'war'
+include 'api-kotlin'
 

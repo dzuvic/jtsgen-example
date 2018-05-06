@@ -17,3 +17,7 @@ hs_err_pid*
 # Don't include the generated TS files
 /client/src/generated/*
 /client/src/exampleapi/
+
+#maven
+/target/
+/*/target/
